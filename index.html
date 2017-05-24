@@ -138,7 +138,7 @@ function mouseDown(){
 function mouseMove(e){
   if(!isDrawing) return;
   if(e.changedTouches){
-    e=e.changedTouches[e.changeTouches.length-1];
+    e=e.changedTouches[e.changedTouches.length-1];
   }
   var x=e.pageX-card.offsetLeft;
   var y=e.pageY-card.offsetTop;
