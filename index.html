@@ -1,193 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,IE=8">
-	<title>《全民打棒球2 Online》</title>
-	<link rel="stylesheet" href="css/main.css">
-	<script type="text/javascript" src="http://www.wasabii.com.tw/scripts/ga/code_event.js"></script>
-	<style>
-	</style>
+  <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <title>Document</title>
+  <style>
+	*{margin:0;padding:0;list-style-type:none;}
+  .btn{
+    padding:6px 12px;
+    display: block;
+    margin: 12px auto;
+  }
+  #card{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    margin: 12px auto;
+  }
+  #canvasOne{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  #canvasTwo{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  </style>
 </head>
 <body>
-<!-- header -->
-<div class="header">
-	<div class="header-box">
-		<a href="http://www.wasabii.com.tw/" class="toW" title="wasabii官方網站"></a>
-	</div>
-</div>
-<div class="container">
-	<!-- menuBar -->
-	<!-- main -->
-	<div class="main indexMain">
-		<a class="btn-point" href="https://member.wasabii.com.tw/WA_billing/topup/topup.aspx" target="_blank">點卡儲值</a>
-		<img src="images/indexCon1.png" alt="活動辦法內容">
-		<div class="bonus-list" data-name="BB">
-			<table class="tables dbi">
-				<tbody>
-					<tr>
-						<td rowspan="6">
-							<div class="logo-box">
-								<div class="logo">
-									<img src="images/bb.png" alt="">
-								</div>
-								<a href="http://bb.wasabii.com.tw/index.aspx" class="btn" target="_blank">前往官網</a>
-							</div>
-						</td>
-						<td class="td-title">面額</td>
-						<td class="td-title">道具名稱</td>
-						<td class="td-title">數量</td>
-					</tr>
-					<tr class="pd">
-						<td >200點</td>
-						<td>WA幣</td>
-						<td>20萬</td>
-					</tr>
-					<tr class="pd">
-						<td rowspan="2">500點</td>
-						<td>白銀寶箱鑰匙</td>
-						<td>1</td>
-					</tr>
-					<tr class="pd">
-						<td>黃金寶箱鑰匙</td>
-						<td>1</td>
-					</tr>
-					<tr class="pd">
-						<td rowspan="2">1000點</td>
-						<td>黃金寶箱鑰匙</td>
-						<td>1</td>
-					</tr>
-					<tr class="pd">
-						<td>潛力值初始化卷</td>
-						<td>1</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="bonus-list" data-name="FS2">
-			<table class="tables dbi">
-				<tbody>
-					<tr>
-						<td rowspan="6">
-							<div class="logo-box">
-								<div class="logo">
-									<img src="images/fs2.png" alt="">
-								</div>
-								<a href="http://fs2.wasabii.com.tw/index.aspx" class="btn" target="_blank">前往官網</a>
-							</div>
-						</td>
-						<td class="td-title">面額</td>
-						<td class="td-title">道具名稱</td>
-						<td class="td-title">數量</td>
-					</tr>
-					<tr class="pd">
-						<td >200點</td>
-						<td>Point</td>
-						<td>2000</td>
-					</tr>
-					<tr class="pd">
-						<td>500點</td>
-						<td>稀有CASH扭蛋球</td>
-						<td>1</td>
-					</tr>
-					<tr class="pd">
-						<td>1000點</td>
-						<td>稀有CASH扭蛋球</td>
-						<td>3</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="bonus-list" data-name="GVO">
-			<table class="tables dbi">
-				<tbody>
-					<tr>
-						<td rowspan="6">
-							<div class="logo-box">
-								<div class="logo">
-									<img src="images/gvo.png" alt="">
-								</div>
-								<a href="http://gvo.wasabii.com.tw/index.aspx" class="btn" target="_blank">前往官網</a>
-							</div>
-						</td>
-						<td class="td-title">面額</td>
-						<td class="td-title">道具名稱</td>
-						<td class="td-title">數量</td>
-					</tr>
-					<tr class="pd">
-						<td >200點</td>
-						<td>特殊造船強化許可證</td>
-						<td>10</td>
-					</tr>
-					<tr class="pd">
-						<td rowspan="2">500點</td>
-						<td>特殊造船強化許可證</td>
-						<td>10</td>
-					</tr>
-					<tr class="pd">
-						<td>特殊造船解體技法書</td>
-						<td>1</td>
-					</tr>
-					<tr class="pd">
-						<td rowspan="2">1000點</td>
-						<td>船長的祕傳書</td>
-						<td>1</td>
-					</tr>
-					<tr class="pd">
-						<td>軍艦船隻改裝指南書</td>
-						<td>1</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="bonus-list" data-name="狂魔">
-			<table class="tables dbi">
-				<tbody>
-					<tr>
-						<td rowspan="6">
-							<div class="logo-box">
-								<div class="logo">
-									<img src="images/cd.png" alt="">
-								</div>
-								<a href="http://cd.wasabii.com.tw/index.aspx" class="btn" target="_blank">前往官網</a>
-							</div>
-						</td>
-						<td class="td-title">面額</td>
-						<td class="td-title">道具名稱</td>
-						<td class="td-title">數量</td>
-					</tr>
-					<tr class="pd">
-						<td >200點</td>
-						<td>星脈號角（小）</td>
-						<td>5</td>
-					</tr>
-					<tr class="pd">
-						<td rowspan="2">500點</td>
-						<td>溫泉時限卡（小）</td>
-						<td>2</td>
-					</tr>
-					<tr class="pd">
-						<td>暴血丹</td>
-						<td>5</td>
-					</tr>
-					<tr class="pd">
-						<td rowspan="2">1000點</td>
-						<td>星屑</td>
-						<td>5</td>
-					</tr>
-					<tr class="pd">
-						<td>萬獸丹</td>
-						<td>5</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<img src="images/indexCon2.png" alt="活動辦法內容">
-	</div>
-</div>
-<!-- footer -->
-<div class="footer">
-	©Cayenne Entertainment Technology Co., Ltd. All rights reserved.
+<button class="btn" onclick="window.location.reload()">在一次</button>
+<div id="card">
+  <canvas id="canvasOne" width="500" height="300"></canvas>
+  <canvas id="canvasTwo" width="500" height="300"></canvas>
 </div>
 </body>
+<script>
+var filledInPixels=0;
+var isDrawing=false;
+var card=document.getElementById('card');
+
+var c=document.getElementById('canvasOne');
+var context=c.getContext("2d");
+
+var c2=document.getElementById('canvasTwo');
+var contextTwo=c2.getContext("2d");
+
+var w=c.width;
+var h=c.height;
+
+var str="images/";
+var imgs=['00','01','02','03']
+var num = Math.floor(Math.random()*4);
+var jpg = ".jpg";
+
+var img=new Image();
+img.src=str+imgs[num]+jpg;
+
+img.onload = draw;
+//drawImage fit
+function draw() {
+    drawImageProp(contextTwo, this, 0, 0, c.width, c.height, 0.5, 0.5);
+}
+//drawImage fit
+function drawImageProp(ctx, img, x, y, w, h, offsetX, offsetY) {
+    if (arguments.length === 2) {
+        x = y = 0;
+        w = ctx.canvas.width;
+        h = ctx.canvas.height;
+    }
+
+    /// default offset is center
+    offsetX = typeof offsetX === 'number' ? offsetX : 0.5;
+    offsetY = typeof offsetY === 'number' ? offsetY : 0.5;
+
+    /// keep bounds [0.0, 1.0]
+    if (offsetX < 0) offsetX = 0;
+    if (offsetY < 0) offsetY = 0;
+    if (offsetX > 1) offsetX = 1;
+    if (offsetY > 1) offsetY = 1;
+
+    var iw = img.width,
+        ih = img.height,
+        r = Math.min(w / iw, h / ih),
+        nw = iw * r,   /// new prop. width
+        nh = ih * r,   /// new prop. height
+        cx, cy, cw, ch, ar = 1;
+
+    /// decide which gap to fill
+    if (nw < w) ar = w / nw;
+    if (nh < h) ar = h / nh;
+    nw *= ar;
+    nh *= ar;
+
+    /// calc source rectangle
+    cw = iw / (nw / w);
+    ch = ih / (nh / h);
+
+    cx = (iw - cw) * offsetX;
+    cy = (ih - ch) * offsetY;
+
+    /// make sure source rectangle is valid
+    if (cx < 0) cx = 0;
+    if (cy < 0) cy = 0;
+    if (cw > iw) cw = iw;
+    if (ch > ih) ch = ih;
+
+    /// fill image in dest. rectangle
+    ctx.drawImage(img, cx, cy, cw, ch,  x, y, w, h);
+}
+
+
+context.fillStyle="#ccc";
+context.globalCompositeOperation="destination-over";
+context.beginPath();
+context.fillRect(0,0,w,h);
+context.closePath();
+
+c.addEventListener('mousedown',mouseDown);
+c.addEventListener('mousemove',mouseMove);
+c.addEventListener('mouseup',mouseUp);
+c.addEventListener('touchstart',mouseDown);
+c.addEventListener('touchmove',mouseMove);
+c.addEventListener('touchend',mouseUp);
+function mouseDown(){
+  if(filledInPixels < 20){
+    isDrawing=true;
+  }else{
+    isDrawing=false;
+  }
+  console.log(isDrawing)
+}
+
+function mouseMove(e){
+  if(!isDrawing) return;
+  if(e.changedTouches){
+    e=e.changedTouches[e.changeTouches.length-1];
+  }
+  var x=e.pageX-card.offsetLeft;
+  var y=e.pageY-card.offsetTop;
+
+  context.globalCompositeOperation="destination-out";
+  context.beginPath();
+  context.arc(x,y,12,0,Math.PI*2,true);
+  context.fill();
+  context.closePath();
+
+  //算出擦拭多少像素百分比
+  var pixels = context.getImageData(0, 0, w, h);
+  var pdata = pixels.data;
+  var len = pdata.length;
+  var total = len / 32;
+  var count = 0;
+  for (var i = 0; i < len; i += 32) {
+      if (parseInt(pdata[i]) === 0) {
+          count++;
+      }
+  }
+  filledInPixels=Math.round((count / total) * 100)//Math.round 四捨五入
+
+  if(filledInPixels>20){
+    context.save();
+    context.fillRect(0,0,w,h);
+    context.fill();
+    context.restore();
+    switch(num){
+      case 0:
+        console.log('恭喜獲得1獎')
+        break;
+      case 1:
+        console.log('恭喜獲得2獎')
+        break;
+      case 2:
+        console.log('恭喜獲得3獎')
+        break;
+      case 3:
+        console.log('恭喜獲得4獎')
+        break;
+    }
+    isDrawing=false;
+  }
+  console.log(filledInPixels+'%');
+}
+
+function mouseUp(){
+  isDrawing=false;
+  console.log(filledInPixels)
+}
+
+
+</script>
 </html>
