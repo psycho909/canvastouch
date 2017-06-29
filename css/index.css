@@ -40,18 +40,9 @@ body, html {
   padding-top: 18px;
 }
 
-
 .index0 .section-box .show-img {
-  width: 1000px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  opacity: 0;
-}
-
-.index0 .section-box .show-img img {
-  width: 1000px;
+  display: none;
+  width: 0;
 }
 
 .index0 .section-box .logo {
