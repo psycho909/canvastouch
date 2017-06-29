@@ -20,7 +20,7 @@
 				<li><a href="https://member.wasabii.com.tw/WA_memberCenter/joinMember/simpleMember_a.aspx" taget="_blank">立即註冊</a></li>
 				<li><a href="http://cd.wasabii.com.tw/client.html" taget="_blank">遊戲下載</a></li>
 				<li><span>分享至</span>
-					<a href="https://www.facebook.com/sharer.php?u=http://event.wasabii.com.tw/CD/170623_vote/index.aspx" class="fb-icon"></a>
+					<a href="https://www.facebook.com/sharer.php?u=" class="fb-icon fb-share" target="_blank"></a>
 				</li>
 			</ul>
 			<a href="http://cd.wasabii.com.tw" class="logo" target="_blank"></a>
@@ -97,7 +97,11 @@
 	</div>
 
 <script>
-
+$(function(){
+	var fbShare="https://www.facebook.com/sharer.php?u=";
+	var webSite=location.href;
+	$(".fb-share").attr('href',fbShare+webSite)
+})
 var sectionArr=[];
 $('.section').each(function(i,v){
 	sectionArr.push(v);
